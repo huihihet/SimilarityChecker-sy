@@ -11,6 +11,10 @@ class SimilarityCheckerTest {
     void setUp() {
         similarityChecker = new SimilarityChecker();
     }
+    @Test
+    void lengthCheck() {
+        checkLengthSimilarity(60, "ASD", "DSA");
+    }
 
     @Test
     void lengthCheckSameLength() {
@@ -31,7 +35,6 @@ class SimilarityCheckerTest {
     void lengthCheck3() {
         checkLengthSimilarity(30, "AA", "AAE");
     }
-
 
     private void checkLengthSimilarity(int expected, String input1, String input2) {
         int actual = similarityChecker.getLengthCheck(input1, input2);
