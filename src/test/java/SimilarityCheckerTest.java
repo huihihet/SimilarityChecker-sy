@@ -11,28 +11,13 @@ class SimilarityCheckerTest {
     void setUp() {
         similarityChecker = new SimilarityChecker();
     }
+
     @Test
     void lengthCheck() {
         checkLengthSimilarity(60, "ASD", "DSA");
-    }
-
-    @Test
-    void lengthCheckSameLength() {
-        checkLengthSimilarity(60, "ASD", "DSA");
-    }
-
-    @Test
-    void lengthCheck1() {
         checkLengthSimilarity(0, "A", "BB");
-    }
-
-    @Test
-    void lengthCheck2() {
+        checkLengthSimilarity(0, "BB", "A");
         checkLengthSimilarity(20, "AAABB", "BAA");
-    }
-
-    @Test
-    void lengthCheck3() {
         checkLengthSimilarity(30, "AA", "AAE");
     }
 
